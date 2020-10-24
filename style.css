@@ -1,0 +1,422 @@
+body{
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family:raleway;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+}
+:root {
+    --main: #1BDCF5;
+    --second: #3DF598;
+  }
+header{
+    display: none;
+}
+nav{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 20px;
+}
+nav >div{
+    color: orange;
+    margin: 10px;
+    cursor: pointer;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+
+}
+nav >div:hover{
+    color: var(--main);
+  
+}
+.active{
+    color: var(--main);
+
+}
+.nav-logo img{
+    width: 200px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+main .logo{
+    width: 70vw;
+    height: auto;
+    position: absolute;
+    top: 30vh;
+    left: 15vw;
+    cursor: pointer;
+}
+.grow{
+  animation: grow .5s ease-in-out; 
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+}
+
+@keyframes grow{
+    0%{
+        transform: scale(1);
+ 
+    }
+     100%{
+        transform: scale(1.05);
+ 
+    }
+  
+}
+
+@keyframes appear{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+        
+        transform: translateY(50px);
+    }
+    100%{
+        transform: translateY(0);
+        transform: scale(1);
+        opacity: 1;
+
+ 
+    }
+  
+}
+@keyframes bounce{
+    0% {transform: translateY(0)}
+    50% {transform:translateY(5px)}
+    100%{
+        transform: translateY(0)
+    }
+  
+}
+@keyframes shiftout{
+    0% {transform: translateY(0)}
+    10% {transform:translateY(50px)}
+    100%{
+        transform: translateY(-2000px)
+    }
+  
+}
+@keyframes shiftin{
+    0% {transform: translateY(500px)}
+    70% {transform:translateY(-20px)}
+    100%{
+        transform: translateY(0px)
+    }
+  
+}
+@keyframes sideout{
+    0% {transform: translateX(0)}
+    10% {transform:translateX(50px)}
+    100%{
+        transform: translateX(-2000px)
+    }
+  
+}
+@keyframes sidein{
+    0% {transform: translateX(1200px)}
+    70% {transform:translateX(-20px)}
+    100%{
+        transform: translateX(0px)
+    }
+  
+}
+
+.front{
+    display: flex;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+
+
+  .title{
+      visibility: hidden;
+      align-self: center;
+      margin-top: 200px;
+    }
+  
+  .arrow{
+      align-self: center;
+  }
+  .arrow >i{
+    visibility: hidden;
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--main);
+
+    text-transform: uppercase;
+    transition: all .3s ease-in;
+}
+.arrow>i:hover{
+    color: white;
+}
+  .appear{
+    animation: appear .5s ease-in-out ; 
+    color: var(--main);
+    font-size: 1.2em;
+
+  }
+  .bounce{
+    animation: bounce 1s cubic-bezier(1, 0.8, 0.8, 1) infinite ;
+
+  }
+  .shiftout{
+    animation: shiftout 1s ease-in-out both ;
+ 
+  }
+  .shiftin{
+    animation: shiftin 1s ease-in-out both ;
+ 
+  }
+  .sideout{
+    animation: sideout 1s ease-in-out both ;
+ 
+  }
+  .sidein{
+    animation: sidein 1s ease-in-out both ;
+ 
+  }
+
+  /* Portfolio cards */
+  .portfolio-page{
+      display: none;
+
+  }
+.cards-wrapper{
+    display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 2rem;
+  padding: 5% 10%;
+  margin-top: -100px;
+}
+
+
+  /* Carf flip */
+
+  
+.scene {
+    width: 300px;
+    height: 300px;
+    margin: 20px 0;
+    perspective: 600px;
+  }
+  
+  .card-to-flip {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+
+  }
+  
+  .card-to-flip.is-flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card__face--front {
+    background-color: orange;
+    /* filter: brightness(80%); */
+    opacity: 0.8;
+}
+
+.card__face--back {
+   
+    transform: rotateY(180deg);
+}
+
+
+.module {
+    width: 300px;
+    height: 300px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    color: white;
+
+}
+.module::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: var(--background);;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(40%) brightness(40%);
+    content: "";
+  }
+  .module-inside{
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    padding: 0;
+  }
+  .module-inside .card-title{
+    font: bold 1.5em sans-serif;
+    text-transform: uppercase;
+  } 
+  .module-inside  .description{
+    margin-top: 20px;
+    padding: 5px;
+
+}
+  /* About page */
+
+  .about-page{
+      position: absolute;
+      width: 100%;
+      top: 100px;
+      display: none;
+    
+    }
+    .about-wrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+  }
+  .details{
+      width: 30%;
+      align-self: flex-start;
+      letter-spacing: 1px;
+
+    }
+    .profile{
+        width: 30%;
+        margin-left: -300px;
+    }
+    .profile > img{
+       border: 2px solid white;
+        width: 100%;
+        height:100%;
+        background-size: cover;
+        background-position: center;
+        filter: grayscale(100%);
+    }
+
+  /* Contact page */
+
+  .contact-page{
+    position: absolute;
+    width: 100%;
+    top: 150px;
+    display: none;
+  }
+  .contact-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-wrapper> a{
+    margin-top: 20px;
+    letter-spacing: 2px;
+
+}
+.contact-wrapper> a:hover{
+    color: orange;
+}
+.contact-wrapper> h1{
+    margin-bottom: 20px;
+}
+.contact-wrapper>p{
+   letter-spacing: 3px;
+}
+
+  /* Fonts */
+
+  @font-face {
+    font-family: raleway;
+    src: url(fonts/Raleway-VariableFont_wght.ttf);
+  }
+
+
+
+  @media screen and (max-width: 992px) {
+    nav{
+        flex-direction: column;
+        z-index: 10;
+        left: 20px;
+    }
+    .nav-logo img{
+        width: 180px;
+        left: 20px;
+    }
+    main .logo {
+        width: 100vw;
+        left: 3vw;
+    }
+    .title{
+        margin-top: 120px;
+ 
+    }
+    .title>h1{
+font-size: 3.5vw;
+    }
+    .about-page{
+        top: 150px;
+    }
+    .about-wrapper{
+        align-items: center;
+        flex-direction: column;
+        z-index: 1;
+       
+  }
+  .details{
+    width: 80vw;
+    align-self: center;
+    margin-left: 0;
+  }
+  .profile{
+    width: 80%;
+    margin-left: -20px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+
+}
+.contact-page{
+    top: 150px;
+  }
+  }
+
+  
+
+  @media screen and (max-width: 600px) {
+    .title{
+        margin-top: 0px;
+ 
+    }
+    .title>h1{
+font-size: 5vw;
+    }
+    .arrow >i{
+    font-size: 5vw;
+    }
+  }

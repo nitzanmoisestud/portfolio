@@ -1,0 +1,41 @@
+[
+    {
+        "title": "RepMyBike",
+        "description": "RepMyBike is a bicycle webshop that sells bike subscriptions for rent and repair. I developed and designed the website with WordPress and WooCommerce system",
+        "image" : "IMG_9822.jpg",
+        "link": "http://repmybike.dk"
+ },
+    {
+        "title": "Snif Skrub",
+        "description": "Snif Skrub is a project game for small kids in the age of 3-4 years old. The game allows parents to teach their children about the energy usage in the house by collecting energy symbols from different rooms. The game is made with CSS animations, JS, SVG and Canvas",
+        "image" : "sniff.png",
+        "link": "https://nitzanmoisestud.github.io/snifskrub/index.html"
+ },
+ {
+    "title": "ANE FABRICIUS",
+    "description": "A portfolio website I made in a group assignment of designing a digital profile for an artist.",
+    "image" : "_K0A2063.jpg",
+    "link": "http://nitzanmoise.com/anefabricius2/index.html"
+},
+{
+    "title": "Jam Session",
+    "description": "Jam Session is a full web application I programmed and designed for my final project on Coding Academy Bootcamp. The app is a social network for musicians. I used the latest web technologies such as HTML, JS6, CSS, VueJS, Bootstrap, and NodeJS.",
+    "image" : "jamsession.PNG",
+    "link": "https://enigmatic-stream-42875.herokuapp.com"
+},
+{
+    "title": "Kopenhagen ART GUIDE",
+    "description": "Kopenhagen Art guide is an online service that provides information about art previews (vernissages), art shows, museum exhibitions, and art events in Denmark.",
+    "image" : "Kopenhagen.PNG",
+    "link": "https://suppmen.github.io/kopenhagen/index.html"
+},
+{
+    "title": "Color Book",
+    "description": "Color book is a small web app where the user can color a picture by choosing color from the color pallete and apply it to the artboard",
+    "image" : "colorbook.PNG",
+    "link": "http://nitzanmoise.com/colorbook/"
+}
+
+
+
+]
